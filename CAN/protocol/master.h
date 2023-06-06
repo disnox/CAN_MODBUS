@@ -23,7 +23,6 @@ typedef struct
 	float			B_SpeedRealData;		//	B电机实际速度			R
 }Register_Typedef;
 
-void protocol_init(void);
 void subscriber_protocol(void);
 void read_protocol(void);
 void write_status(uint16_t addr,uint8_t data);

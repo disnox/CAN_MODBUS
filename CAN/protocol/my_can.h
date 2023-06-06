@@ -19,17 +19,19 @@ typedef struct
     uint16_t size;
 } Can_fifo_buffer_t;
 
+extern uint8_t Car_buff[CAN_BUFFER_SIZE];
 
 uint16_t can_serial_available(void);
 uint8_t can_serial_read_char(void);
 uint16_t can_serial_write(uint8_t *buffer, uint16_t length); //∑¢ÀÕ
 uint16_t can_serial_read(uint8_t *buffer, uint16_t length);  //Ω” ’
 
+extern void can_filter_init(void);
 extern void CAN_Para_Init(void);
 extern uint8_t CANx_SendStdData(CAN_HandleTypeDef* hcan,uint16_t ID,uint8_t *pData,uint16_t Len);
 extern void can_receive(void);
 extern void can_transmit(void);
-extern uint8_t Car_buff[CAN_BUFFER_SIZE];
+
 
 #endif
 
